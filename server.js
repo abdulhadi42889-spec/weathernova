@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(__dirname));
 
 const API_KEY = process.env.OPENWEATHER_API_KEY || '785c9fed4946bb7841d81620c88d0204';
 const WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather';
